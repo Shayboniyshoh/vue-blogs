@@ -1,6 +1,6 @@
 <template>
-    <div class="post-list" v-for="post in posts" :key="post.id">
-        <SinglePost :post="post" />
+    <div class="post-list">
+        <SinglePost :post="post" v-for="post in posts" :key="post.id" />
     </div>
 </template>
 
@@ -16,4 +16,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0;
+}
+</style>
